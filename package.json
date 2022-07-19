@@ -1,6 +1,6 @@
 {
-  "name": "@uniswap/interface",
-  "description": "Uniswap Interface",
+  "name": "@opus/opus-interface",
+  "description": "Opus Interface",
   "homepage": ".",
   "private": true,
   "devDependencies": {

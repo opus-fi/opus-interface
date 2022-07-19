@@ -2144,6 +2144,37 @@
   resolved "https://registry.yarnpkg.com/@nodelib/fs.stat/-/fs.stat-1.1.3.tgz#2b5a3ab3f918cca48a8c754c08168e3f03eba61b"
   integrity sha512-shAmDyaQC4H92APFoIaVDHCx5bStIocgvbwQyxPRrbUY20V1EYTbSDchWbuwlMG3V17cprZhA6+78JfB+3DTPw==
 
+"@opus-fi/core@1.0.2", "@opus-fi/core@^1.0.2":
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/@opus-fi/core/-/core-1.0.2.tgz#2415fe5ee0655ce4ca00aaf924420a7b0423b9f0"
+  integrity sha512-SmNEdxQAtrZoE7ZLCvdaVuPSHm261qhF60ln6mwUxSs9mRjb9Pm4fsPXSrVm2ghtlnHIz9EwzAnQ44AR8mLPlQ==
+
+"@opus-fi/lib@1.0.3":
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/@opus-fi/lib/-/lib-1.0.3.tgz#d236bb772cd4305eb68eb289a930312ce41c7962"
+  integrity sha512-r2F8LbMvBTaMxCRf66UwOm71K1mZjUq7tDfy6rHuwZxluLTy7l5jSTjGtfvTwm2D0ZD83RmNEYBANYerzDgkMg==
+
+"@opus-fi/periphery@^1.0.1":
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/@opus-fi/periphery/-/periphery-1.0.1.tgz#3571d4dfcdebbeb35f0e9b710dc4d929787aa0b5"
+  integrity sha512-t2HzAjg/O0afVMdo7UAXDCdV/j8cZ2XS8JAN4/vU1cWKUmkGBVdebzRcZDoceDWrnLfp6atC7Bpex/kMgTrvcA==
+  dependencies:
+    "@opus-fi/core" "1.0.2"
+    "@opus-fi/lib" "1.0.3"
+
+"@opus-fi/sdk@1.0.4":
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/@opus-fi/sdk/-/sdk-1.0.4.tgz#7904eefbfd8dfce6ad885c97ea5300ac06a56eb0"
+  integrity sha512-2Hj7h7YhddJGU5vNf7Bu2eRNhfdi7S/vTfLoATZwih2uOFvoW3mBUVbT227jmq6f1tnbDxqNV4B7Fmxxn9mdjw==
+  dependencies:
+    "@opus-fi/core" "^1.0.2"
+    big.js "^5.2.2"
+    decimal.js-light "^2.5.0"
+    jsbi "^3.1.1"
+    tiny-invariant "^1.1.0"
+    tiny-warning "^1.0.3"
+    toformat "^2.0.0"
+
 "@pedrouid/iso-crypto@^1.0.0":
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/@pedrouid/iso-crypto/-/iso-crypto-1.1.0.tgz#3fb4050ea99f2f8ee41ba8661193c0989c815c95"
@@ -2878,11 +2909,6 @@
   resolved "https://registry.yarnpkg.com/@uniswap/governance/-/governance-1.0.2.tgz#7371ab54dea9a5c045275001e2d5325ff2c11a93"
   integrity sha512-L7BzdI/asAINB2F6EvJuQcg5YhykNeEfZxJrn2RPIVvx+9A9u+opDuqnBK4SYnanrsr3UEX1NwWXwDHmyw2TjQ==
 
-"@uniswap/lib@1.1.1":
-  version "1.1.1"
-  resolved "https://registry.yarnpkg.com/@uniswap/lib/-/lib-1.1.1.tgz#0afd29601846c16e5d082866cbb24a9e0758e6bc"
-  integrity sha512-2yK7sLpKIT91TiS5sewHtOa7YuM8IuBXVl4GZv2jZFys4D2sY7K5vZh6MqD25TPA95Od+0YzCVq6cTF2IKrOmg==
-
 "@uniswap/liquidity-staker@^1.0.2":
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/@uniswap/liquidity-staker/-/liquidity-staker-1.0.2.tgz#afed49d51c5f97411432e891a59a24817728dad6"
@@ -2895,41 +2921,10 @@
   resolved "https://registry.yarnpkg.com/@uniswap/merkle-distributor/-/merkle-distributor-1.0.1.tgz#dc3d911f65a860fc3f0cae074bdcd08ed6a27a4d"
   integrity sha512-5gDiTI5hrXIh5UWTrxKYjw30QQDnpl8ckDSpefldNenDlYO1RKkdUYMYpvrqGi2r7YzLYTlO6+TDlNs6O7hDRw==
 
-"@uniswap/sdk@3.0.3":
-  version "3.0.3"
-  resolved "https://registry.yarnpkg.com/@uniswap/sdk/-/sdk-3.0.3.tgz#8201c7c72215d0030cb99acc7e661eff895c18a9"
-  integrity sha512-t4s8bvzaCFSiqD2qfXIm3rWhbdnXp+QjD3/mRaeVDHK7zWevs6RGEb1ohMiNgOCTZANvBayb4j8p+XFdnMBadQ==
-  dependencies:
-    "@uniswap/v2-core" "^1.0.0"
-    big.js "^5.2.2"
-    decimal.js-light "^2.5.0"
-    jsbi "^3.1.1"
-    tiny-invariant "^1.1.0"
-    tiny-warning "^1.0.3"
-    toformat "^2.0.0"
-
 "@uniswap/token-lists@^1.0.0-beta.19":
   version "1.0.0-beta.19"
   resolved "https://registry.yarnpkg.com/@uniswap/token-lists/-/token-lists-1.0.0-beta.19.tgz#5256db144fba721a6233f43b92ffb388cbd58327"
   integrity sha512-19V3KM7DAe40blWW1ApiaSYwqbq0JTKMO3yChGBrXzQBl+BoQZRTNZ4waCyoZ5QM45Q0Mxd6bCn6jXcH9G1kjg==
-
-"@uniswap/v2-core@1.0.0":
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/@uniswap/v2-core/-/v2-core-1.0.0.tgz#e0fab91a7d53e8cafb5326ae4ca18351116b0844"
-  integrity sha512-BJiXrBGnN8mti7saW49MXwxDBRFiWemGetE58q8zgfnPPzQKq55ADltEILqOt6VFZ22kVeVKbF8gVd8aY3l7pA==
-
-"@uniswap/v2-core@^1.0.0":
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/@uniswap/v2-core/-/v2-core-1.0.1.tgz#af8f508bf183204779938969e2e54043e147d425"
-  integrity sha512-MtybtkUPSyysqLY2U210NBDeCHX+ltHt3oADGdjqoThZaFRDKwM6k1Nb3F0A3hk5hwuQvytFWhrWHOEq6nVJ8Q==
-
-"@uniswap/v2-periphery@^1.1.0-beta.0":
-  version "1.1.0-beta.0"
-  resolved "https://registry.yarnpkg.com/@uniswap/v2-periphery/-/v2-periphery-1.1.0-beta.0.tgz#20a4ccfca22f1a45402303aedb5717b6918ebe6d"
-  integrity sha512-6dkwAMKza8nzqYiXEr2D86dgW3TTavUvCR0w2Tu33bAbM8Ah43LKAzH7oKKPRT5VJQaMi1jtkGs1E8JPor1n5g==
-  dependencies:
-    "@uniswap/lib" "1.1.1"
-    "@uniswap/v2-core" "1.0.0"
 
 "@walletconnect/browser-utils@^1.4.1":
   version "1.4.1"

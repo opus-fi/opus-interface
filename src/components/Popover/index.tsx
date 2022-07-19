@@ -1,16 +1,23 @@
-import { Options, Placement } from '@popperjs/core'
-import Portal from '@reach/portal'
-import useInterval from 'lib/hooks/useInterval'
-import React, { useCallback, useMemo, useState } from 'react'
+import { Placement } from '@popperjs/core'
+import { transparentize } from 'polished'
+import React, { useCallback, useState } from 'react'
 import { usePopper } from 'react-popper'
-import styled from 'styled-components/macro'
+import styled from 'styled-components'
+import useInterval from '../../hooks/useInterval'
+import Portal from '@reach/portal'
 
 const PopoverContainer = styled.div<{ show: boolean }>`
   z-index: 9999;
-  visibility: ${(props) => (props.show ? 'visible' : 'hidden')};
-  opacity: ${(props) => (props.show ? 1 : 0)};
+
+  visibility: ${props => (props.show ? 'visible' : 'hidden')};
+  opacity: ${props => (props.show ? 1 : 0)};
   transition: visibility 150ms linear, opacity 150ms linear;
+
+  background: ${({ theme }) => theme.bg2};
+  border: 1px solid ${({ theme }) => theme.bg3};
+  box-shadow: 0 4px 8px 0 ${({ theme }) => transparentize(0.9, theme.shadow1)};
   color: ${({ theme }) => theme.text2};
+  border-radius: 8px;
 `
 
 const ReferenceElement = styled.div`
@@ -26,17 +33,16 @@ const Arrow = styled.div`
     position: absolute;
     width: 8px;
     height: 8px;
-    box-sizing: border-box;
     z-index: 9998;
 
     content: '';
-    border: 1px solid ${({ theme }) => theme.bg2};
+    border: 1px solid ${({ theme }) => theme.bg3};
     transform: rotate(45deg);
-    background: ${({ theme }) => theme.bg0};
+    background: ${({ theme }) => theme.bg2};
   }
 
   &.arrow-top {
-    bottom: -4px;
+    bottom: -5px;
     ::before {
       border-top: none;
       border-left: none;
@@ -44,7 +50,7 @@ const Arrow = styled.div`
   }
 
   &.arrow-bottom {
-    top: -4px;
+    top: -5px;
     ::before {
       border-bottom: none;
       border-right: none;
@@ -52,7 +58,7 @@ const Arrow = styled.div`
   }
 
   &.arrow-left {
-    right: -4px;
+    right: -5px;
 
     ::before {
       border-bottom: none;
@@ -61,7 +67,7 @@ const Arrow = styled.div`
   }
 
   &.arrow-right {
-    left: -4px;
+    left: -5px;
     ::before {
       border-right: none;
       border-top: none;
@@ -80,22 +86,14 @@ export default function Popover({ content, show, children, placement = 'auto' }:
   const [referenceElement, setReferenceElement] = useState<HTMLDivElement | null>(null)
   const [popperElement, setPopperElement] = useState<HTMLDivElement | null>(null)
   const [arrowElement, setArrowElement] = useState<HTMLDivElement | null>(null)
-
-  const options = useMemo(
-    (): Options => ({
-      placement,
-      strategy: 'fixed',
-      modifiers: [
-        { name: 'offset', options: { offset: [8, 8] } },
-        { name: 'arrow', options: { element: arrowElement } },
-        { name: 'preventOverflow', options: { padding: 8 } },
-      ],
-    }),
-    [arrowElement, placement]
-  )
-
-  const { styles, update, attributes } = usePopper(referenceElement, popperElement, options)
-
+  const { styles, update, attributes } = usePopper(referenceElement, popperElement, {
+    placement,
+    strategy: 'fixed',
+    modifiers: [
+      { name: 'offset', options: { offset: [8, 8] } },
+      { name: 'arrow', options: { element: arrowElement } }
+    ]
+  })
   const updateCallback = useCallback(() => {
     update && update()
   }, [update])

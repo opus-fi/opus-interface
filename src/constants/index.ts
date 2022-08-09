@@ -3,7 +3,7 @@ import { AbstractConnector } from '@web3-react/abstract-connector'
 
 import { injected } from '../connectors'
 
-export const ROUTER_ADDRESS = '0x8ea6f21e6fd85dcaabf8ee1fe954116ccd6b8425'
+export const ROUTER_ADDRESS = '0xb8E4ABf81C48e3B1222E92d43ae47a278Cba903B'
 
 export const ZERO_ADDRESS = '0x0000000000000000000000000000000000000000'
 
@@ -54,7 +54,8 @@ export const UNI: { [chainId in ChainId]: Token } = {
     18,
     'wBTC',
     'wBTC'
-  )
+  ),
+  [ChainId.BSC_TESTNET]: new Token(ChainId.BSC_TESTNET, ZERO_ADDRESS, 18, 'UNI', 'Uniswap')
 }
 
 export const COMMON_CONTRACT_NAMES: { [address: string]: string } = {
@@ -74,7 +75,8 @@ const WETH_ONLY: ChainTokenList = {
   [ChainId.RINKEBY]: [WETH[ChainId.RINKEBY]],
   [ChainId.GÖRLI]: [WETH[ChainId.GÖRLI]],
   [ChainId.KOVAN]: [WETH[ChainId.KOVAN]],
-  [ChainId.NEON_DEVNET]: [WETH[ChainId.NEON_DEVNET]]
+  [ChainId.NEON_DEVNET]: [WETH[ChainId.NEON_DEVNET]],
+  [ChainId.BSC_TESTNET]: [WETH[ChainId.BSC_TESTNET]]
 }
 
 // used to construct intermediary pairs for trading

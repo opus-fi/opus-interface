@@ -30,7 +30,7 @@ export function getNetworkLibrary(): Web3Provider {
 
 // ETH chainId: 1, 3, 4, 5, 42
 export const injected = new InjectedConnector({
-  supportedChainIds: [245022926]
+  supportedChainIds: [245022926, 1]
 })
 
 // mainnet only
@@ -56,6 +56,6 @@ export const portis = new PortisConnector({
 // mainnet only
 export const walletlink = new WalletLinkConnector({
   url: NETWORK_URL,
-  appName: 'Uniswap',
+  appName: 'OpusFi',
   appLogoUrl: OPUS_ICON_URL
 })

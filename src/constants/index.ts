@@ -14,16 +14,16 @@ type ChainTokenList = {
   readonly [chainId in ChainId]: Token[]
 }
 
-export const AMPL = new Token(ChainId.MAINNET, '0xD46bA6D942050d489DBd938a2C909A5d5039A161', 9, 'AMPL', 'Ampleforth')
-export const DAI = new Token(ChainId.MAINNET, '0x6B175474E89094C44Da98b954EedeAC495271d0F', 18, 'DAI', 'Dai Stablecoin')
-export const USDC = new Token(ChainId.MAINNET, '0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48', 6, 'USDC', 'USD//C')
-//export const USDT = new Token(ChainId.MAINNET, '0xdAC17F958D2ee523a2206206994597C13D831ec7', 6, 'USDT', 'Tether USD')
-export const WBTC = new Token(ChainId.MAINNET, '0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599', 8, 'WBTC', 'Wrapped BTC')
-export const FEI = new Token(ChainId.MAINNET, '0x956F47F50A910163D8BF957Cf5846D573E7f87CA', 18, 'FEI', 'Fei USD')
-export const TRIBE = new Token(ChainId.MAINNET, '0xc7283b66Eb1EB5FB86327f08e1B5816b0720212B', 18, 'TRIBE', 'Tribe')
-export const FRAX = new Token(ChainId.MAINNET, '0x853d955aCEf822Db058eb8505911ED77F175b99e', 18, 'FRAX', 'Frax')
-export const FXS = new Token(ChainId.MAINNET, '0x3432B6A60D23Ca0dFCa7761B7ab56459D9C964D0', 18, 'FXS', 'Frax Share')
-export const renBTC = new Token(ChainId.MAINNET, '0xEB4C2781e4ebA804CE9a9803C67d0893436bB27D', 8, 'renBTC', 'renBTC')
+// export const AMPL = new Token(ChainId.MAINNET, '0x2578c6c1ac883443388edd688ca10e87d088bfa8', 9, 'AMPL', 'Ampleforth')
+ export const DAI = new Token(ChainId.MAINNET, '0x7ad98aeadbbcdf3693b0b53c09da4033704c9322', 18, 'WDAI', 'Dai Stablecoin (Wormhole')
+ export const USDC = new Token(ChainId.MAINNET, '0x2578c6c1ac883443388edd688ca10e87d088bfa8', 6, 'USDC', 'USDC')
+// //export const USDT = new Token(ChainId.MAINNET, '0xdAC17F958D2ee523a2206206994597C13D831ec7', 6, 'USDT', 'Tether USD')
+ export const WBTC = new Token(ChainId.MAINNET, '0x6fbf8f06ebce724272813327255937e7d1e72298', 8, 'WBTC', 'Wrapped BTC')
+// export const FEI = new Token(ChainId.MAINNET, '0x2578c6c1ac883443388edd688ca10e87d088bfa8', 18, 'FEI', 'Fei USD')
+// export const TRIBE = new Token(ChainId.MAINNET, '0x2578c6c1ac883443388edd688ca10e87d088bfa8', 18, 'TRIBE', 'Tribe')
+// export const FRAX = new Token(ChainId.MAINNET, '0x2578c6c1ac883443388edd688ca10e87d088bfa8', 18, 'FRAX', 'Frax')
+// export const FXS = new Token(ChainId.MAINNET, '0x2578c6c1ac883443388edd688ca10e87d088bfa8', 18, 'FXS', 'Frax Share')
+// export const renBTC = new Token(ChainId.MAINNET, '0x2578c6c1ac883443388edd688ca10e87d088bfa8', 8, 'renBTC', 'renBTC')
 
 export const USDT = new Token(
   ChainId.NEON_DEVNET,
@@ -37,11 +37,11 @@ export const AVERAGE_BLOCK_TIME_IN_SECS = 13
 export const PROPOSAL_LENGTH_IN_BLOCKS = 40_320
 export const PROPOSAL_LENGTH_IN_SECS = AVERAGE_BLOCK_TIME_IN_SECS * PROPOSAL_LENGTH_IN_BLOCKS
 
-export const GOVERNANCE_ADDRESS = '0x5e4be8Bc9637f0EAA1A755019e06A68ce081D58F'
+export const GOVERNANCE_ADDRESS = '0x2dbfc6562c4e63f7717abacb29c5498efe5c2ad3'
 
-export const TIMELOCK_ADDRESS = '0x1a9C8182C09F50C8318d769245beA52c32BE35BC'
+export const TIMELOCK_ADDRESS = '0x2dbfc6562c4e63f7717abacb29c5498efe5c2ad3'
 
-const UNI_ADDRESS = '0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984'
+const UNI_ADDRESS = '0x6fbf8f06ebce724272813327255937e7d1e72298'
 export const UNI: { [chainId in ChainId]: Token } = {
   [ChainId.MAINNET]: new Token(ChainId.MAINNET, UNI_ADDRESS, 18, 'UNI', 'Uniswap'),
   [ChainId.RINKEBY]: new Token(ChainId.RINKEBY, UNI_ADDRESS, 18, 'UNI', 'Uniswap'),
@@ -87,12 +87,8 @@ export const ADDITIONAL_BASES: { [chainId in ChainId]?: { [tokenAddress: string]
   [ChainId.MAINNET]: {
     '0xA948E86885e12Fb09AfEF8C52142EBDbDf73cD18': [new Token(ChainId.MAINNET, UNI_ADDRESS, 18, 'UNI', 'Uniswap')],
     '0x561a4717537ff4AF5c687328c0f7E90a319705C0': [new Token(ChainId.MAINNET, UNI_ADDRESS, 18, 'UNI', 'Uniswap')],
-    [FEI.address]: [TRIBE],
-    [TRIBE.address]: [FEI],
-    [FRAX.address]: [FXS],
-    [FXS.address]: [FRAX],
-    [WBTC.address]: [renBTC],
-    [renBTC.address]: [WBTC]
+    //[WBTC.address]: [renBTC]
+    //[renBTC.address]: [WBTC]
   }
 }
 
@@ -102,7 +98,7 @@ export const ADDITIONAL_BASES: { [chainId in ChainId]?: { [tokenAddress: string]
  */
 export const CUSTOM_BASES: { [chainId in ChainId]?: { [tokenAddress: string]: Token[] } } = {
   [ChainId.MAINNET]: {
-    [AMPL.address]: [DAI, WETH[ChainId.MAINNET]]
+    //[AMPL.address]: [DAI, WETH[ChainId.MAINNET]]
   }
 }
 

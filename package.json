@@ -5,6 +5,9 @@
   "private": true,
   "devDependencies": {
     "@ethersproject/experimental": "^5.0.1",
+    "@opus-fi/core": "1.0.2",
+    "@opus-fi/periphery": "^1.0.1",
+    "@opus-fi/sdk": "1.0.6",
     "@popperjs/core": "^2.4.4",
     "@reach/dialog": "^0.10.3",
     "@reach/portal": "^0.10.3",
@@ -31,9 +34,6 @@
     "@uniswap/liquidity-staker": "^1.0.2",
     "@uniswap/merkle-distributor": "1.0.1",
     "@uniswap/token-lists": "^1.0.0-beta.19",
-    "@opus-fi/sdk": "1.0.6",
-    "@opus-fi/core": "1.0.2",
-    "@opus-fi/periphery": "^1.0.1",
     "@web3-react/core": "^6.0.9",
     "@web3-react/fortmatic-connector": "^6.0.9",
     "@web3-react/injected-connector": "^6.0.7",
@@ -122,6 +122,7 @@
   },
   "license": "GPL-3.0-or-later",
   "dependencies": {
-    "@uniswap/default-token-list": "^2.0.0"
+    "@uniswap/default-token-list": "^2.0.0",
+    "@uniswap/redux-multicall": "^1.1.5"
   }
 }

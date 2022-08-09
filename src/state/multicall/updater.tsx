@@ -17,7 +17,7 @@ import {
 } from './actions'
 
 // chunk calls so we do not exceed the gas limit
-const CALL_CHUNK_SIZE = 500
+const CALL_CHUNK_SIZE = 10
 
 /**
  * Fetches a chunk of calls, enforcing a minimum block number constraint
@@ -33,7 +33,9 @@ async function fetchChunk(
   console.debug('Fetching chunk', multicallContract, chunk, minBlockNumber)
   let resultsBlockNumber, returnData
   try {
-    ;[resultsBlockNumber, returnData] = await multicallContract.aggregate(chunk.map(obj => [obj.address, obj.callData]))
+    [resultsBlockNumber, returnData] = await multicallContract.aggregate(chunk.map(obj => [obj.address, obj.callData]))
+    console.log(resultsBlockNumber)
+    console.log(returnData)
   } catch (error) {
     console.debug('Failed to fetch chunk inside retry', error)
     throw error
@@ -153,6 +155,7 @@ export default function Updater(): null {
       })
     )
 
+    console.log(chunkedCalls) /* Logging Problem objCallData */
     cancellations.current = {
       blockNumber: latestBlockNumber,
       cancellations: chunkedCalls.map((chunk, index) => {

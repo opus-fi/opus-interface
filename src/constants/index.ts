@@ -3,7 +3,7 @@ import { AbstractConnector } from '@web3-react/abstract-connector'
 
 import { injected } from '../connectors'
 
-export const ROUTER_ADDRESS = '0xb8E4ABf81C48e3B1222E92d43ae47a278Cba903B'
+export const ROUTER_ADDRESS = '0xbb3856efc1e85a56554d57b9ea12cfd4367aebcb'
 
 export const ZERO_ADDRESS = '0x0000000000000000000000000000000000000000'
 
@@ -48,14 +48,7 @@ export const UNI: { [chainId in ChainId]: Token } = {
   [ChainId.ROPSTEN]: new Token(ChainId.ROPSTEN, UNI_ADDRESS, 18, 'UNI', 'Uniswap'),
   [ChainId.GÖRLI]: new Token(ChainId.GÖRLI, UNI_ADDRESS, 18, 'UNI', 'Uniswap'),
   [ChainId.KOVAN]: new Token(ChainId.KOVAN, UNI_ADDRESS, 18, 'UNI', 'Uniswap'),
-  [ChainId.NEON_DEVNET]: new Token(
-    ChainId.NEON_DEVNET,
-    '0x6fbf8f06ebce724272813327255937e7d1e72298',
-    18,
-    'wBTC',
-    'wBTC'
-  ),
-  [ChainId.BSC_TESTNET]: new Token(ChainId.BSC_TESTNET, ZERO_ADDRESS, 18, 'UNI', 'Uniswap')
+  [ChainId.NEON_DEVNET]: new Token(ChainId.NEON_DEVNET, ZERO_ADDRESS, 18, 'OPUS', 'Opus')
 }
 
 export const COMMON_CONTRACT_NAMES: { [address: string]: string } = {
@@ -75,8 +68,7 @@ const WETH_ONLY: ChainTokenList = {
   [ChainId.RINKEBY]: [WETH[ChainId.RINKEBY]],
   [ChainId.GÖRLI]: [WETH[ChainId.GÖRLI]],
   [ChainId.KOVAN]: [WETH[ChainId.KOVAN]],
-  [ChainId.NEON_DEVNET]: [WETH[ChainId.NEON_DEVNET]],
-  [ChainId.BSC_TESTNET]: [WETH[ChainId.BSC_TESTNET]]
+  [ChainId.NEON_DEVNET]: [WETH[ChainId.NEON_DEVNET]]
 }
 
 // used to construct intermediary pairs for trading

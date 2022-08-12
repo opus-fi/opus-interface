@@ -29,9 +29,8 @@ export function getNetworkLibrary(): Web3Provider {
 }
 
 // ETH chainId: 1, 3, 4, 5, 42
-// neon: 245022926
 export const injected = new InjectedConnector({
-  supportedChainIds: [97]
+  supportedChainIds: [245022926]
 })
 
 // mainnet only

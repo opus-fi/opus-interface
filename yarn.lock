@@ -2149,10 +2149,10 @@
   resolved "https://registry.npmjs.org/@opus-fi/core/-/core-1.0.2.tgz"
   integrity sha512-SmNEdxQAtrZoE7ZLCvdaVuPSHm261qhF60ln6mwUxSs9mRjb9Pm4fsPXSrVm2ghtlnHIz9EwzAnQ44AR8mLPlQ==
 
-"@opus-fi/default-token-list@^1.0.3":
-  version "1.0.3"
-  resolved "https://registry.yarnpkg.com/@opus-fi/default-token-list/-/default-token-list-1.0.3.tgz#fe7f05d045b31a1ef73c72a14867a2a37d38afae"
-  integrity sha512-e2BzRLC2rXGPyO8L6asU8QWhBjtjj9z6mrOry+mZcxevoPJN/JooWmIQ+3ht85qvRmzdbbaYeLLhN0cm8LMo/w==
+"@opus-fi/default-token-list@^1.0.5":
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/@opus-fi/default-token-list/-/default-token-list-1.0.5.tgz#7d9793be83642dde247e128ad233f56621becdbd"
+  integrity sha512-DUx2u/rjGlTC1zo48B6cdc0lz0Ib1wIgsuAi2DIppeOYKPNgU5bZeKDaqMHoYogPr3EXq9MYr955GmzjjPupoQ==
 
 "@opus-fi/lib@1.0.3":
   version "1.0.3"

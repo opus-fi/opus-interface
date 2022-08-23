@@ -122,6 +122,6 @@
   },
   "license": "GPL-3.0-or-later",
   "dependencies": {
-    "@opus-fi/default-token-list": "^1.0.3"
+    "@opus-fi/default-token-list": "^1.0.5"
   }
 }

@@ -2167,10 +2167,10 @@
     "@opus-fi/core" "1.0.2"
     "@opus-fi/lib" "1.0.3"
 
-"@opus-fi/sdk@1.0.8":
-  version "1.0.8"
-  resolved "https://registry.yarnpkg.com/@opus-fi/sdk/-/sdk-1.0.8.tgz#6e3e57c7a0bc23da14a4afd9c4bcc26bb6de929b"
-  integrity sha512-kJesKJymmJecpxZzWSjTXMb5Sy2EDIScysVlqEbpHW+hJioC4svl8x4BjOREe7rNVVdIGYlNyvK6qDjmxrJGow==
+"@opus-fi/sdk@1.0.9":
+  version "1.0.9"
+  resolved "https://registry.yarnpkg.com/@opus-fi/sdk/-/sdk-1.0.9.tgz#8403fee1eb84c892cfaee048bdc478e480b0070b"
+  integrity sha512-Rk/LDa0jMR+dIAhjJ6WhLErUOT3+nemLJqFq6OlVIyXt2Un4/hEoT4t8032SRRUoOm7jJyHfpmC922XNgG6yKw==
   dependencies:
     "@opus-fi/core" "^1.0.2"
     big.js "^5.2.2"
